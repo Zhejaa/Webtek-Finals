@@ -260,7 +260,7 @@ input[type=checkbox] ~ ul {
    transition:all 1s ease;
 	font-family: 'open_sansregular';
 	background:#ffffff;
-	font-size: 60%;
+	font-size: 80%;
 }
 input[type=checkbox]:checked ~ ul { 
 	max-height: 100%;
