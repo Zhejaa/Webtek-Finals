@@ -8,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 <head>
     <link rel="icon" type="image/png" href="images/webicon.png">
-    <title>Webtek | Prelims </title>
+    <title>Webtek | Midterms </title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
     <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
@@ -83,7 +83,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<ul class="nav nav-tabs" style="margin-top: 50px">
 			<li><a data-toggle="tab" href="#html">HTML</a></li>
 			<li><a data-toggle="tab" href="#css">CSS</a></li>
-			<li><a data-toggle="tab" href="#JSclient">JavaScript(Client-side)</a></li>
+			<li><a data-toggle="tab" href="#JSclient">JavaScript</a></li>
 		</ul>
 		<div class="tab-content">
 			<div id="html" class="tab-pane fade in active">
@@ -1162,10 +1162,332 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 			<div id="JSclient" class="tab-pane fade">
 				<h3>
-					<p class="para">Stands for <b>"Cascading Style Sheets" . </b>It is a language that describes the style of an HTML document or used to specify the presentation aspects.</p>
-					<p class="para"><b>Developers:</b> Hakon Wium Lie = HTML Cascading Style Sheets and Bert Boss = Stream-based Style Sheet Proposal</p>
-					<p class="para">CSS is a separate language with its own syntax, which is enable you to lay out web pages exactly as you want them.</p>
+					<p class="para">It is a programming language and it has many uses and it is easy to learn.</p>
+					<p class="para">Make websites respond to user interaction</p>
+					<p class="para">Organize and present data (e.g. automate spreadsheet work; data visualization)</p>
+					<p class="para">Developed in 1995 by Brendan Eich</p>
+					<p class="para">It is a scripting language for the Netscape Navigator Browser</p>
 					<ul>
+						<li><input type="checkbox" id="cb13"/><label for="cb13">JavaScript Client Side</label>
+                            <ul>   
+                                        <h3>Client-side scripting - for interfactivity</h3>
+                                                <li>querySelector only returns first match (single value)
+                                                example:
+                                                querySelector(#p)
+                                                RESULT: &lt;p id = "p"&gt; hello /&gt;
+                                                querySelectorAll returns all matches
+                                                <li>document.body.matches('html > *')
+                                                RESULT: true
+                                                EXPLANATION: html > * : all child nodes of HTML
+                                                <li>querySelectorAll returns all matches
+                                                example:
+                                                querySelectorAll ('p')
+                                                RESULT: [p#p]
+                                                <li>p.textContent = 'webtek'
+                                                RESULT: "webtek"
+                                                <li> p.nodeValue
+                                                RESULT: #null (always!)
+                                                - p.nodeName
+                                                RESULT: #text
+                                                <li>p.lang = 'en-US'
+                                                RESULT: "en-US"
+                                                <li>p.setAttribute
+                                                <li>p.getAttribute
+                                                <li>p.style = 'color: black'
+                                                RESULT: "color: black"
+                                                <li>p.style.color = '#ff0ff'
+                                                RESULT: '#ff0ff'
+                                                <li>p.style.bottomBorderColor
+                                                move UP : parentNode
+                                                move DOWN : childNode
+                                                move SIDEWARDS : nextSibling // previousSibling
+                                            <ul>
+                                                <li>whitespaces are read as text</li>
+                                                <li>comments are read as comments</li>
+                                            </ul>
+                                                <li>document.body.parentNode - always returns the parent
+                                                <li>document.body.parentElement - can return null
+                                                <li>document.body.children - returns elements only
+                                                <li>document.body.childNodes - return everything (i.e. element, comment, whitepace)
+                                                <li>h1 = document.createElement('h1')
+                                                RESULT: "&lt;h1&gt;&lt;h1&gt;"
+                                                <li>h1 = document.createElement('h1')
+                                                RESULT: "&lt;h1&gt;&lt;h1&gt;"
+                                                <li>document.body.appendChild(h1)
+                                                RESULT: "&lt;h1&gt;&lt;h1&gt;"
+                                                <li>t = document.createTextNode('hi')
+                                                    <p>h1.appendChild(+)
+                                                    <p>t2.document.createTextNode('hello')
+                                                    <p>h1.insertBefore(t2, +)
+                                                    <p>var t3 = document.createTextNode('pamalit')
+                                                    <p>h1.replaceChild(t3, t)
+                                                    <p>h1.removeChild(t2)
+                                                    <p>h1.cloneNode
+                                                    <p>h2 = h1.cloneNode(true)
+                                                    <p>var b = document.body.cloneNode(true)
+                                                <p>RESULT: undefined
+                                                <p>- b
+                                                <p>RESULT: &lt;body&gt;..&lt;/body&gt; ~entire body
+                                                <li>document.importNode (this is similar to clone)
+                                                <li>document.adoptNode (transfers the node and removes the original node)
+							</ul> 
+						</li>
+						<li><input type="checkbox" id="cb14"/><label for="cb14">Programmatic constructs</label>   
+                                        <ul><li>DOM is NOT a part of javaScript
+                                        functionalities:
+                                        Javascript is an impeerative programming language
+                                            <ul>
+                                                <li>dynamically type language
+                                                <li>data types are not explicitly defined
+                                            </ul>
+
+                                            <li>ECMA Script 5
+                                                <ul>
+                                                        <li>variables:
+                                                    <ul>
+                                                        <li>var - variables with a 'var' keyword becomes a global variable
+                                                        <li>let - Separate variable, doesn't introduce global property of window
+                                                        <li>const - Declares a read-only named constant.
+                                                    </ul>
+                                                </ul>
+                                        </ul>
+						</li>
+						<li><input type="checkbox" id="cb15"/><label for="cb15">Data Types in JavaScript</label>   
+                                        <ul>
+                                            <li>Simple/Primitive
+                                                <ul>
+                                                    <li>Boolean
+                                                        <ul>
+                                                            <li>truthy - Strings are true / Non-empty string
+                                                            <li>falsy - No character is false / empty string/undefined/null
+                                                        </ul>
+                                                    <li>Number
+                                                        <ul>
+                                                            <li>Decimal
+                                                            <li>Binary
+                                                            <li>Octal
+                                                            <li>Hexadecimal
+                                                            <li>Scientific notation
+                                                        </ul>
+                                                    <li>Strings
+                                                        <ul>
+                                                            <li>Single quotes
+                                                            <li>Double quotes
+                                                        </ul>
+                                                    <p>*There is no char type in JavaScript</p>	
+                                                    <li>Undefined & null
+                                                </ul>
+                                            <li>Standard / object
+                                                <ul>
+                                                    <li>Array
+                                                    <li>Boolean
+                                                    <li>Date
+                                                    <li>Error
+                                                    <li>Function
+                                                    <li>JSON
+                                                    <li>Math
+                                                    <li>Number
+                                                    <li>Object
+                                                    <li>RegExp
+                                                    <li>String
+                                                    <li>Map
+                                                    <li>Set
+                                                    <li>Weak Map
+                                                    <li>Weak Set
+                                                </ul>
+                                        </ul>
+						</li>
+						<li><input type="checkbox" id="cb16"/><label for="cb16">Data Types : Objects</label>   
+                                            <ul>
+                                                <li>Properties:</li>
+                                                    <ul>
+                                                        <li>Objects can be seen as a collection of properties.</li>
+                                                        <li>With the object literal syntax, a limited set of properties are initialized; then properties can be added and removed. </li>
+                                                        <li>Property values can be values of any type, including other objects, which enables building complex data structures.</li>
+                                                        <li>A key value is either a String or a Symbol value.</li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li><b>Data Property</b></li>
+                                                            <ul>
+                                                                <li>Associates a key with a value and has the following attributes</li>
+                                                                <img src="images/dataprop.png" alt="Syntax HTML" height="300" width="500">
+                                                            </ul>
+                                                    </ul>
+                                                    <ul>
+                                                        <li><b>Accessor Property</b></li>
+                                                            <ul>
+                                                                <li>Associates a key with one or two accessor functions (get and set) to retrieve or store a value and has the following attributes:</li>
+                                                                <img src="images/dataacc.png" alt="Syntax HTML" height="300" width="500">
+                                                            </ul>
+                                                    </ul>
+                                            </ul>
+						</li>
+						<li><input type="checkbox" id="cb17"/><label for="cb17">Arrays in Javascript are Dynamic</label>   
+                             <ul>   <ul>
+                                        <li>Defining array in two types:</li>
+                                            <ul>
+                                                <li>new array ();</li>
+                                                <li> []; </li>
+                                            </ul>
+                                    </ul>
+                                        <h3>Methods</h3>
+                                    <ul>
+                                        <li>Mutator methods - these methods modify the array </li>
+                                        <ul>
+                                            <li>Array.prototype.push() = Adds one or more elements to the end of an array and returns the new length of the array.</li>
+                                            <li>Array.prototype.pop() = Removes the last element from an array and returns that element.</li>
+                                            <li>Array.prototype.shift() = Removes the first element from an array and returns that element. </li>
+                                            <li>Array.prototype.unshift() = Adds one or more elements to the front of an array and returns the new length of the array.</li>
+                                            <li>Array.prototype.sort() = Sorts the elements of an array in place and returns the array.</li>
+                                            <li>Array.prototype.splice() = Adds and/or removes elements from an array.</li>
+                                        </ul>
+                                    </ul>
+                                    <ul>
+                                        <li>Accessor methods - These methods do not modify the array and return some representation of the array</li>
+                                        <ul>
+                                            <li>Array.prototype.join() = Joins all elements of an array into a string.</li>
+                                        </ul>
+                                    </ul>
+                                    <ul>
+                                        <li>Iterator methods - e.g. a.map(function(S,Idx,array));</li>
+                                        <ul>
+                                           <li>Array.prototype.every() = Returns true if every element in this array satisfies the provided testing function.</li>
+                                            <li> Array.prototype.some() = Returns true if at least one element in this array satisfies the provided testing function.</li>
+
+                                        </ul>
+                                    </ul>
+							</ul>
+						</li>
+						<li><input type="checkbox" id="cb18"/><label for="cb18">Functions</label>   
+                             <ul>  
+                                    <h3> Functions </h3>
+                                        <li> First class objects, because they can have properties and methods just like any other object. </li>
+                                        <li> Abstraction for a code block (always has return value) </li>
+                                        <li>To return a value other than the default, a function must have a return statement that specifies the value to return.</li>
+                                        <li>A function without a return statement will return a default value. </li>
+                                        <li> The parameters of a function call are the function's arguments. </li>
+    
+                                    <ul>
+                                        <li><b>Defining Functions</b></li>
+                                            <ul>
+                                                <li><b>Function Declaration (function statement)</b></li>
+                                                <img src="images/functiondec.png" alt="Syntax HTML" height="200" width="550">
+                                                    <ul>
+                                                    <li>name = the function name</li>
+                                                    <li>param = the name of an argument to be passed to the function.</li>
+                                                    <li>statements = the statements comprising the body of the function.</li>
+                                                    </ul>
+                                            </ul>
+                                            <ul>
+                                                <li><b>Function Expression</b></li>
+                                                    <ul>
+                                                        <li>A function expression is similar to and has the same syntax as a function declaration.</li>
+                                                        <li>A function expression may be a part of a larger expression. </li>
+                                                    </ul>
+                                                    <img src="images/functionex.png" alt="Syntax HTML" height="200" width="550">
+                                                    <ul>
+                                                        <li>name = The function name. Can be omitted, in which case the function becomes known as an anonymous function.</li>
+                                                        <li>param = The name of an argument to be passed to the function.</li>
+                                                        <li>statements = The statements comprising the body of the function.</li>
+                                                    </ul>
+                                            </ul>
+                                        <ul>
+                                            <li><b>Arrow function expression(=>)</b></li>
+                                                <ul>
+                                                    <li>n arrow function expression has a shorter syntax and lexically binds its this value</li>
+                                                </ul>
+                                                <img src="images/functionarr.png" alt="Syntax HTML" height="200" width="550">
+                                                <ul>
+                                                    <li>param = The name of an argument. Zero arguments need to be indicated with ().  For only one argument, the parentheses are not required. (like foo => 1)</li>
+                                                    <li>statements or expression =  Multiple statements need to be enclosed in brackets. A single expression requires no brackets. The expression is also the implicit return value of the function.</li>
+                                                </ul>
+                                        </ul>
+                                    </ul>							 
+							</ul>
+						</li>	
+						<li><input type="checkbox" id="cb19"/><label for="cb19">Mutator & Accessor</label>   
+                             <ul>
+                                    <h3>Mutator methods</h3>
+                                        <li>- copyWithin - copies a sequence of array elements within the array
+                                        <li>- fill - fills all the elements of an array from a start index to an end index with a static value
+                                        <li>- push - add elements and increase length
+                                        <li>- pop - remove last element and return value
+                                        <li>- shift - remove first element and shift
+                                        <li>- unshift - insert an element at the first position and shift
+                                        <li>- sort - sort elements of the array
+                                        <li>- splice - add/remove element from an array
+                                        <li>- reverse - reverses the order of the elements of an array in place — the first becomes the last, and the last becomes the first	
+                                    <h3>Accessor methods</h3>
+                                        <li>- concat - returns a new array comprised of this array joined with other array(s) and/or value(s)
+                                        <li>- includes - determines whether an array contains a certain element, returning true or false as appropriate
+                                        <li>- split - will produce an array
+                                        <li>- join - joins all elements of an array into a string
+                                        <li>- slice - extracts a section of an array and returns a new array
+                                        <li>- lastIndexOf - returns the last (greatest) index of an element within the array equal to the specified value, or -1 if none is found
+                                        <li>- toSource - returns an array literal representing the specified array; you can use this value to create a new array
+                                        <li>- toString - returns a string representing the array and its elements
+                                        <li>- toLocateString - returns a localized string representing the array and its elements							 
+							 </ul>
+						</li>
+						<li><input type="checkbox" id="cb50"/><label for="cb50">OBJECTS (Prototype Object Orientation)</label>   
+                             <ul>
+                                        <ul>
+                                            <li>var emptyObj = new Object();
+                                            <li>-> RESULT: Object {}
+                                        </ul>
+                                        <ul>
+                                            <example>
+                                            <li>var student = {}
+                                            <br>student.idno = '2150123'
+                                            <br>student['name'] = 'Maria Makiling;
+                                            <br>Student.toString = function() {
+                                            <br>return '$ {this.idno}: ${this.name}
+                                            <br>}
+                                            <br>> Student.toString()
+                                            <br>< 2155912 :
+                                        </ul>
+                                        <ul>JSON -  converts objects into a string representation
+                                            <li>JSON.stringify(Student)
+                                            <br>RESULT: "{"id no": "2150123", "name" : "Maria Makiling"}"
+                                            <br>localStorage.setItem('2150123', JSON.stringify(student))
+                                            <br>o = JSON.parse(student)
+                                            <br>> o
+                                            <br>< Object: "{idno: 2150123, name: Maria Makiling}"
+                                            <br>
+                                            <br>- typeOf
+                                            <br>- instanceOf
+                                        </ul>
+                                        <ul>	
+                                            <li>constructor function - use 'new' keyword
+                                            <br>function Peson (name, age){
+                                            <br>this.name = name;
+                                            <br>this.age = age;
+                                            <br>this.speak = function(){
+                                            <br>console.log('Hello! I'm ${this.name}.');
+                                            <br>}
+                                            <br>}
+                                        </ul>						 
+							 </ul>
+						</li>
+						<li><input type="checkbox" id="cb51"/><label for="cb51">References</label>   
+                             <ul>
+								<ul>
+									<li> Lecture of Sir Carlos O. Montes </li>
+									<li>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions </li>
+									<li>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array </li>
+									<li>https://www.thoughtco.com/accessors-and-mutators-2034335 </li>
+                                    <li>http://www.cascade-framework.com/</li>
+                                    <li>https://en.wikipedia.org/wiki/Cascade_Framework</li>
+                                    <li>http://foundation.zurb.com/</li>
+                                    <li>https://en.wikipedia.org/wiki/Foundation_(framework)</li>
+                                    <li>http://www.yaml.de/</li>
+                                    <li>references: http://www.corelangs.com/css/basics/versions.html</li>
+                                    <li>https://htmlmag.com/article/an-introduction-to-css-preprocessors-sass-less-stylus</li>
+								</ul>						 
+							 </ul>
+						</li>						
+					</ul>
+				</h3>
 		</div>	
 
 	</div><!-- end main -->
