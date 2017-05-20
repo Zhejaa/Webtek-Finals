@@ -5,14 +5,15 @@
     <title>Finals</title>
 </head>
 <body>
+<!-- Sarah doc start-->
     <h1>Asynchronous JavaScript and XML (AJAX) </h1>
 
         <h2>Synchronous Request </h2>
-            <p>•	Recommended for few small requests. JavaScript will not continue to execute, until the server response
+            <p>Recommended for few small requests. JavaScript will not continue to execute, until the server response
                 is ready. If the server is busy or slow, the application will hang or stop. </p>
 
         <h2>Asynchronous Request </h2>
-            <p>•	JavaScript does not have to wait for the server response. It can execute other scripts while waiting
+            <p>JavaScript does not have to wait for the server response. It can execute other scripts while waiting
                 for server response, and deal with the response when the response is ready. </p>
 
     <h1>Document Object Model </h1>
@@ -68,8 +69,8 @@
 
     <h1>Java EE Web Application </h1>
         <p>Collection of resources installed under a specific subset of the URL namespace of a web application server
-            compliant with the Java EE Specification (e.g. Apache‟s Tomcat, Apache‟s Geronimo, Sun Microsystems‟ Glassfish,
-            IBM‟s WebSphere, etc.) </p>
+            compliant with the Java EE Specification (e.g. Apache‟s Tomcat, Apache‟s Geronimo, Sun Microsystems‟
+            Glassfish, IBM‟s WebSphere, etc.) </p>
         <p>Resources</p>
             <ul>
                 <li>Static resources: web pages, images, stylesheets, etc. (serves as is)</li>
@@ -94,8 +95,8 @@
     <h1>Servlets</h1>
         <p>Java Object based on the Servlet API</p>
         <p>Runs in a server application to answer client requests; technically, servlets are not tied to a specific
-            client-server protocol, but they are most commonly used with HTTP and the term "servlet" is often used in the
-            context of an “HTTP Servlet”</p>
+            client-server protocol, but they are most commonly used with HTTP and the term "servlet" is often used in
+            the context of an “HTTP Servlet”</p>
         <p>Web-tier components in the Java EE architecture.</p>
         <p>Runs in, and is managed by, a web-tier container called the "Servlet Container" </p>
         <p>Mapped to URLs to which clients send requests</p>
@@ -157,11 +158,79 @@
                 </ul>
             <h3>Servlet Request Dispatching (RequestDispatcher)</h3>
                 <p>Obtain a RequestDispatcher to a resource (static or dynamic) from the request object</p>
-                <p>Include the dispatcher resource (or its output) in the current response; one or more resources can be
-                    included (e.g. use for banners, footers, etc.)</p>
+                <p>Include the dispatcher resource (or its output) in the current response; one or more resources can
+                    be included (e.g. use for banners, footers, etc.)</p>
             <h3>rqstDsp.include(request, response)</h3>
                 <p>Forwards the processing of the current request to the dispatcher resource; the servlet processing
                     the current request must not generate a response ( e.g. use in MVC “controller” servlets)</p>
+<!-- Sarah doc end -->
+
+<!-- Arvince doc start -->
+
+    <h1>Web Application Security</h1>
+
+        <h2>2013 Top 10 List of Web Application Attack by OWASP</h2>
+
+            <dl>
+                <dt>1. Injection</dt>
+                    <dd>- Injection flaws, such as SQL, OS, and LDAP injection occur when untrusted data is sent to
+                        an interpreter as part of a command or query. The attacker’s hostile data can trick the
+                        interpreter into executing unintended commands or accessing data without proper
+                        authorization.</dd>
+                <dt>2. Broken Authentication and Session Management</dt>
+                    <dd>- Application functions related to authentication and session management are often not
+                        implemented correctly, allowing attackers to compromise passwords, keys, or session tokens,
+                        or to exploit other implementation flaws to assume other users’ identities.</dd>
+                <dt>3. Cross-Site Scripting (XSS)</dt>
+                    <dd>- XSS flaws occur whenever an application takes untrusted data and sends it to a web browser
+                        without proper validation or escaping. XSS allows attackers to execute scripts in the
+                        victim’s browser which can hijack user sessions, deface web sites, or redirect the user
+                        to malicious sites.</dd>
+                <dt>4. Insecure Direct Object References</dt>
+                    <dd>- A direct object reference occurs when a developer exposes a reference to an internal
+                        implementation object, such as a file, directory, or database key. Without an access control
+                        check or other protection, attackers can manipulate these references to access
+                        unauthorized data.</dd>
+                <dt>5. Security Misconfiguration</dt>
+                    <dd>- Good security requires having a secure configuration defined and deployed for the
+                        application, frameworks, application server, web server, database server, and platform.
+                        Secure settings should be defined, implemented, and maintained, as defaults are often
+                        insecure. Additionally, software should be kept up to date.</dd>
+                <dt>6. Sensitive Data Exposure</dt>
+                    <dd>- Many web applications do not properly protect sensitive data, such as credit cards,
+                        tax IDs, and authentication credentials. Attackers may steal or modify such weakly
+                        protected data to conduct credit card fraud, identity theft, or other crimes. Sensitive
+                        data deserves extra protection such as encryption at rest or in transit, as well as
+                        special precautions when exchanged with the browser.</dd>
+                <dt>7. Missing Function Level Access Control</dt>
+                    <dd>- Most web applications verify function level access rights before making that functionality
+                        visible in the UI. However, applications need to perform the same access control checks
+                        on the server when each function is accessed. If requests are not verified, attackers
+                        will be able to forge requests in order to access functionality without proper
+                        authorization.</dd>
+                <dt>8. Cross-Site Request Forgery (CSRF)</dt>
+                    <dd>- A CSRF attack forces a logged-on victim’s browser to send a forged HTTP request,
+                        including the victim’s session cookie and any other automatically included authentication
+                        information, to a vulnerable web application. This allows the attacker to force the
+                        victim’s browser to generate requests the vulnerable application thinks are legitimate
+                        requests from the victim.</dd>
+                <dt>9. Using Components with Known Vulnerabilities</dt>
+                    <dd>- Components, such as libraries, frameworks, and other software modules, almost always
+                        run with full privileges. If a vulnerable component is exploited, such an attack can
+                        facilitate serious data loss or server takeover. Applications using components with
+                        known vulnerabilities may undermine application defenses and enable a range of possible
+                        attacks and impacts.</dd>
+                <dt>10. Unvalidated Redirects and Forwards</dt>
+                    <dd>- Web applications frequently redirect and forward users to other pages and websites,
+                        and use untrusted data to determine the destination pages. Without proper validation,
+                        attackers can redirect victims to phishing or malware sites, or use forwards to access
+                        unauthorized pages.</dd>
+            </dl>
+
+    <h5>Reference</h5>
+        <ul>
+            <li>https://www.owasp.org/index.php/Top_10_2013-Top_10</li>
+        </ul>
 
 </body>
 </html>
