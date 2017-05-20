@@ -80,17 +80,88 @@
             <ul>
                 <li>Java EE APIs </li>
             </ul>
-    <p>Enterprise JavaBeans Technology </p>
-    <p>Java Servlet Technology </p>
-    <p>Java Server Pages </p>
-    <p>Java Server Pages Standard Tag Library </p>
-    <p>Java Server Faces</p>
-    <p>Java Msg Service API</p>
-    <p>Java Transaction API </p>
-    <p>JavaMail API</p>
-    <p>JavaBeans Activation Framework</p>
-    <p>Java API for XML Processing</p>
+        <p>Enterprise JavaBeans Technology </p>
+        <p>Java Servlet Technology </p>
+        <p>Java Server Pages </p>
+        <p>Java Server Pages Standard Tag Library </p>
+        <p>Java Server Faces</p>
+        <p>Java Msg Service API</p>
+        <p>Java Transaction API </p>
+        <p>JavaMail API</p>
+        <p>JavaBeans Activation Framework</p>
+        <p>Java API for XML Processing</p>
 
+    <h1>Servlets</h1>
+        <p>Java Object based on the Servlet API</p>
+        <p>Runs in a server application to answer client requests; technically, servlets are not tied to a specific
+            client-server protocol, but they are most commonly used with HTTP and the term "servlet" is often used in the
+            context of an “HTTP Servlet”</p>
+        <p>Web-tier components in the Java EE architecture.</p>
+        <p>Runs in, and is managed by, a web-tier container called the "Servlet Container" </p>
+        <p>Mapped to URLs to which clients send requests</p>
+        <p>Typically asked with (among other things)</p>
+            <ul>
+                <li>Processing and/or storing data submitted vial HTML forms</li>
+                <li>Generating dynamic content</li>
+            </ul>
+                <h3>javax.servlet</h3>
+                    <ul>
+                        <li>Servlet, GenericServlet</li>
+                        <li>ServletRequest, ServletResponse</li>
+                        <li>ServletConfig, ServletContext</li>
+                        <li>RequestDispatcher</li>
+                    </ul>
+                <h3>javax.servlet.http</h3>
+                    <ul>
+                        <li>HttpServlet</li>
+                        <li>HttpServletRequest</li>
+                        <li>HttpServletResponse</li>
+                        <li>HttpSession</li>
+                        <li>Cookie</li>
+                    </ul>
+
+        <h2>Servlet Processing</h2>
+            <p>Client sends a request to a web server URL that is mapped to a servlet. Web server passes on the
+                request to the servlet container</p>
+            <p>Servlet container checks if servlet is already loaded</p>
+            <p>If it is not yet loaded, servlet container loads the servlet class and instantiates the servlet, and
+                calls its init method. </p>
+            <p>Servlet container invokes the servlet's service method, passing request and response objects
+                as arguments</p>
+            <p>Servlet processes the request using the response object to create the response, which is returned by
+                the servlet container to the web server, which in turn sends the response to the client</p>
+            <p>Subsequent request to the servlet will not require servlet re-instantiation, unless the servlet has been
+                unloaded; before a servlet is unloaded, the servlet container invokes its destroy method. </p>
+            <h3>init(config)</h3>
+                <p>Invoked once on the servlet by the servlet container when the servlet is instantiated; can be used
+                    by the servlet for one-time startup initialization </p>
+            <h3>service(request, response)</h3>
+                <p>Invoked each time the servlet is called upon to process a request (typically on a separate thread
+                    for each call) </p>
+                <p>In HttpServlet, the default Service implementation maps the call to a specific doXXX() method
+                    (e.g. doGet, doPost) which is typically overridden to affect the servlet's functionality </p>
+            <h3>Destroy()</h3>
+                <p>Invoked on the servlet by the servlet container when the servlet is to be unloaded (e.g. when the
+                    application is stopped or undeployed); can be used by the servlet for clean-up processing
+                    (e.g. resource deallocation) </p>
+            <h3>Servlet Request Processing (HttpServletRequest)</h3>
+                <ul>
+                    <li>Retrieving user-supplied request parameters</li>
+                    <li>Retrieving request header values</li>
+                </ul>
+            <h3>Servlet Response Processing (HttpServletResponse)</h3>
+                <ul>
+                    <li>Setting response status code</li>
+                    <li>Setting response headers</li>
+                    <li>Obtaining output object for sending the response</li>
+                </ul>
+            <h3>Servlet Request Dispatching (RequestDispatcher)</h3>
+                <p>Obtain a RequestDispatcher to a resource (static or dynamic) from the request object</p>
+                <p>Include the dispatcher resource (or its output) in the current response; one or more resources can be
+                    included (e.g. use for banners, footers, etc.)</p>
+            <h3>rqstDsp.include(request, response)</h3>
+                <p>Forwards the processing of the current request to the dispatcher resource; the servlet processing
+                    the current request must not generate a response ( e.g. use in MVC “controller” servlets)</p>
 
 </body>
 </html>
