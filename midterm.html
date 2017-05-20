@@ -81,12 +81,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="main_bg"><!-- start main -->
     <div class="container">
 		<ul class="nav nav-tabs" style="margin-top: 50px">
-			<li><a data-toggle="tab" href="#internet">HTML</a></li>
-			<li><a data-toggle="tab" href="#www">CSS</a></li>
-			<li><a data-toggle="tab" href="#http">JavaScript(Client-side)</a></li>
+			<li><a data-toggle="tab" href="#html">HTML</a></li>
+			<li><a data-toggle="tab" href="#css">CSS</a></li>
+			<li><a data-toggle="tab" href="#JSclient">JavaScript(Client-side)</a></li>
 		</ul>
 		<div class="tab-content">
-			<div id="internet" class="tab-pane fade in active">
+			<div id="html" class="tab-pane fade in active">
 				<h3>
 					<p class="para">Stands for "Hypertext Markup Language." HTML is the language used to create webpages. "Hypertext" refers to the hyperlinks that an HTML page may contain. "Markup language" refers to the way tags are used to define the page layout and elements within the page. It was invented by Tim Berners-Lee, a British Engineer, Computer Scientist and Professor at MIT in 1991. </p>
 					<ul>
@@ -115,7 +115,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                         &lt;/HTML&gt;
                                                     </pre>
                                             </ul>
-                                        </li>
+                                        
 
                                         <li> What is the syntax of HTML? </li>
                                         <ul>
@@ -135,7 +135,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                 </ol>
                                             </li>
                                         </ul>
-                            </ul>							
+                            </ul>	
+						</li>
 						<li><input type="checkbox" id="cb2"/><label for="cb2">HTML Versions</label>
 							<ul>
                                     <ul>
@@ -456,24 +457,715 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</h3>
 
 			</div>
-			<div id="www" class="tab-pane fade">
+			<div id="css" class="tab-pane fade">
 				<h3>
 					<p class="para">Stands for <b>"Cascading Style Sheets". </b>It is a language that describes the style of an HTML document or used to specify the presentation aspects.</p>
 					<p class="para"><b>Developers:</b> Hakon Wium Lie = HTML Cascading Style Sheets and Bert Boss = Stream-based Style Sheet Proposal</p>
 					<p class="para">CSS is a separate language with its own syntax, which is enable you to lay out web pages exactly as you want them.</p>
+					<ul>
+						<li><input type="checkbox" id="cb5"/><label for="cb5">CSS Fundamentals</label>
+							        <ul>
+                                        <li> Internal Stylesheet </li>
+                                        <ul>
+                                            <li>It is the way of placing the CSS codes inside the "head" tags.</li>
+                                        </ul>
+                                        <li> External Stylesheet </li>
+                                        <ul>
+                                            <li>Writing the code in any text editor.</li>
+                                        </ul>
+                                        <li> Inline style </li>
+                                        <ul>
+                                            <li>Can be applied to only one element.</li>
+                                        </ul>										
+                                    </ul>
+						</li>
+						<li><input type="checkbox" id="cb6"/><label for="cb6">CSS Versions</label>
+                                    <ul>
+                                        <li> CSS 1 </li>
+                                            <ul>
+                                                <li> released in 1996 </li>
+                                                <li> Properties: adding font properties such as typeface and emphasis color of text, backgrounds, and other elements Text attributes such as spacing between words, letters, and lines of text. </li>
+                                            </ul>
+                                        <li> CSS 2 </li>
+                                            <ul>
+                                                <li> developed by W3C and published as a recommendation in 1998 </li>
+                                                <li> Properties: positioning that allowed CSS to be used for page layout, also introduced styles for other media types and more sophisticated methods for selecting elements for styling. </li>
+                                            </ul>
+                                        <li> CSS 3 </li>
+                                            <ul>
+                                                <li> drafts were published in 1999 </li>
+                                                <li> Properties: presentation-style properties, allowing you to effectively build presentations from Web documents. CSS level 3 is divided into several separate documents called modules. Due to the modularization, different modules have different stability and statuses. </li>
+                                            </ul>
+                                    </ul>
+						</li>	
+						<li><input type="checkbox" id="cb7"/><label for="cb7">CSS Preprocessors</label>
+								<ul>	<p>Pre-processors extend CSS with variables, 
+                                    operators, interpolations, functions, mixins 
+                                    and many more other usable assets. SASS, LESS 
+                                    and Stylus are the well known ones.</p>
+
+                                        <h4><b>Variables</b></h4>
+
+                                            <p>Variables were all time wanted feature for CSS.
+                                            Every developer, wanted to define a base color and
+                                            use it all over the CSS file, in stead of writing
+                                            the hex or named color in a property each time.
+                                            Same as "color", variables needed for "width",
+                                            "font-size", "font-family", "borders" etc.</p>
+
+                                            <p>Variables in SASS start with $ sign,
+                                            in LESS @ sign and no prefix in Stylus.
+                                            Both in SASS and LESS, values are assigned
+                                            with colon (:), and with equals sign (=) in Stylus.</p>
+
+                                                <h5>Examples</h5>
+
+                                                    <p>Sass</p>
+                                                        <pre>
+                                                            $font-size: 16px;
+
+                                                            div {
+                                                                font-size: $font-size;
+                                                            }
+                                                        </pre>
+
+                                                    <p>Less</p>
+                                                        <pre>
+                                                            @font-size: 16px;
+
+                                                            div {
+                                                                font-size: @font-size;
+                                                            }
+                                                        </pre>
+
+                                                    <p>Stylus</p>
+                                                        <pre>
+                                                            font-size = 16px
+
+                                                            div
+                                                                font-size font-size
+                                                        </pre>
+
+                                                    <p>CSS</p>
+                                                        <pre>
+                                                            div {
+                                                                font-size: 16px;
+                                                            }
+                                                        </pre>
+
+                                        <h4><b>Nesting</b></h4>
+
+                                            <p>CSS lacks visual hierarchy while working
+                                            with child selectors. You have to write
+                                            selectors and their combinations in separate
+                                            lines. Nesting provides a visual hierarchy as
+                                            in the HTML and increases the readability.
+                                            In some cases, nesting causes oversizing the
+                                            selectors and something like a "selector train",
+                                            so use it wisely.</p>
+
+                                                                                <h5>Examples</h5>
+
+                                                    <p>Sass</p>
+                                                        <pre>
+                                                            $link-color: #999;
+                                                            $link-hover: #229ed3;
+
+                                                            ul {
+                                                                margin: 0;
+
+                                                                li {
+                                                                    float: left;
+                                                                }
+
+                                                                a {
+                                                                    color: $link-color;
+
+                                                                    &:hover {
+                                                                        color: $link-hover;
+                                                                    }
+                                                                }
+                                                            }
+                                                        </pre>
+
+                                                    <p>Less</p>
+                                                        <pre>
+                                                            @link-color: #999;
+                                                            @link-hover: #229ed3;
+
+                                                            ul {
+                                                                margin: 0;
+
+                                                                li {
+                                                                    float: left;
+                                                                }
+
+                                                                a {
+                                                                    color: @link-color;
+
+                                                                    &:hover {
+                                                                        color: @link-hover;
+                                                                    }
+                                                                }
+                                                            }
+                                                        </pre>
+
+                                                    <p>Stylus</p>
+                                                        <pre>
+                                                            link-color = #999
+                                                            link-hover = #229ed3
+
+                                                            ul
+                                                                margin 0
+                                                                li
+                                                                    float left
+                                                                a
+                                                                    color link-color
+                                                                    &:hover
+                                                                        color link-hover
+                                                        </pre>
+
+                                                    <p>CSS</p>
+                                                        <pre>
+                                                            ul { margin: 0; }
+                                                            ul li { float: left; }
+                                                            ul a { color: #999; }
+                                                            ul a:hover { color: #229ed3; }
+                                                        </pre>
+
+                                        <h4><b>Mixins</b></h4>
+
+                                            <p>Mixins are set of definitions that compiles according
+                                            to some parameters or static rules. With them you can easily 
+                                            write cross-browser background gradients or CSS arrows etc.</p>
+
+                                                <h5>Examples</h5>
+
+                                                    <p>Sass</p>
+                                                        <pre>
+                                                            @mixin bordered($width) {
+                                                                border: $width solid #ddd;
+
+                                                                &:hover {
+                                                                    border-color: #999;
+                                                                }
+                                                            }
+
+                                                            h1 {
+                                                                @include bordered(5px);
+                                                            }
+                                                        </pre>
+
+                                                    <p>Less</p>
+                                                        <pre>
+                                                            .bordered (@width) {
+                                                                border: @width solid #ddd;
+
+                                                                &:hover {
+                                                                    border-color: #999;
+                                                                }
+                                                            }
+
+                                                            h1 {
+                                                                .bordered(5px);
+                                                            }
+                                                        </pre>
+
+                                                    <p>Stylus</p>
+                                                        <pre>
+                                                            bordered(w)
+                                                                border: n solid #ddd
+                                                                &:hover
+                                                                    border-color: #999
+
+                                                            h1
+                                                                bordered(5px)
+                                                        </pre>
+
+                                                    <p>CSS</p>
+                                                        <pre>
+                                                            h1 { border: 5px solid #ddd; }
+                                                            h1:hover { border-color: #999; }
+                                                        </pre>
+
+                                        <h4><b>Extends</b></h4>
+
+                                            <p>Extends are useful for sharing a generic definition
+                                            with selectors rather than copying it in. All extended
+                                            selectors are grouped in compiled CSS. SASS extends every
+                                            instance of extended selector that includes its child selectors
+                                            and inherited properties. However, in LESS you can select every
+                                            instance of extended selector by adding "all" attribute to extend
+                                            method or you can select only the main instance. Extends are also chainable.</p>
+
+                                                <h5>Examples</h5>
+
+                                                    <p>Sass</p>
+                                                        <pre>
+                                                            .block { margin: 10px 5px; }
+
+                                                            p {
+                                                              @extend .block;
+                                                              border: 1px solid #eee;
+                                                            }
+
+                                                            ul, ol {
+                                                              @extend .block;
+                                                              color: #333;
+                                                              text-transform: uppercase;
+                                                            }
+                                                        </pre>
+
+                                                    <p>Less</p>
+                                                        <pre>
+                                                            .block { margin: 10px 5px; }
+
+                                                            p {
+                                                              &:extend(.block);
+                                                              border: 1px solid #eee;
+                                                            }
+
+                                                            ul, ol {
+                                                              &:extend(.block);
+                                                              color: #333;
+                                                              text-transform: uppercase;
+                                                            }
+                                                        </pre>
+
+                                                    <p>Stylus</p>
+                                                        <pre>
+                                                            .block
+                                                                margin 10px 5px
+
+                                                            p
+                                                                @extend .block
+                                                                border 1px solid #eee
+
+                                                            ul
+                                                            ol
+                                                                @extend .block
+                                                                color #333
+                                                                text-transform uppercase
+                                                        </pre>
+
+                                                    <p>CSS</p>
+                                                        <pre>
+                                                            .block, p, ul, ol { margin: 10px 5px; }
+
+                                                            p { border: 1px solid #eee; }
+                                                            ul, ol { color: #333; text-transform: uppercase; }
+                                                        </pre>	
+
+                                        <h4><b>Color Operations</b></h4>
+
+                                            <p>All three pre-processors have color functions to play with colors.
+                                            You can lighten the base color or saturate it, even you can mix two
+                                            or more different colors. This feature is not very essential but nice to have.</p>
+
+                                                <h5>Examples</h5>
+
+                                                    <p>Sass</p>
+                                                        <pre>
+                                                            saturate($color, $amount)
+                                                            desaturate($color, $amount)
+                                                            lighten($color, $amount)
+                                                            darken($color, $amount)
+                                                            adjust-hue($color, $amount)
+                                                            opacify($color, $amount)
+                                                            transparentize($color, $amount)
+                                                            mix($color1, $color2[, $amount])
+                                                            grayscale($color)
+                                                            complement($color)
+                                                        </pre>
+
+                                                    <p>Less</p>
+                                                        <pre>
+                                                            saturate(@color, @amount)
+                                                            desaturate(@color, @amount)
+                                                            lighten(@color, @amount)
+                                                            darken(@color, @amount)
+                                                            fadein(@color, @amount)
+                                                            fadeout(@color, @amount)
+                                                            fade(@color, @amount)
+                                                            spin(@color, @amount)
+                                                            mix(@color1, @color2, @weight)
+                                                            grayscale(@color)
+                                                            contrast(@color)
+                                                        </pre>
+
+                                                    <p>Stylus</p>
+                                                        <pre>
+                                                            red(color)
+                                                            green(color)
+                                                            blue(color)
+                                                            alpha(color)
+                                                            dark(color)
+                                                            light(color)
+                                                            hue(color)
+                                                            saturation(color)
+                                                            lightness(color)
+                                                        </pre>
+
+
+                                        <h4><b>If/Else Statements</b></h4>
+
+                                            <p>Control directives and expressions help to build similar style
+                                            definitions according to matched conditions or variables. SASS and
+                                            Stylus support normal if/else conditionals. But in LESS, you can
+                                            achieve this with CSS Guards.</p>
+
+                                                <h5>Examples</h5>
+
+                                                    <p>Sass</p>
+                                                        <pre>
+                                                            @if lightness($color) > 30% {
+                                                                background-color: black;
+                                                            }
+
+                                                            @else {
+                                                                background-color: white;
+                                                            }
+                                                        </pre>
+
+                                                    <p>Less</p>
+                                                        <pre>
+                                                            .mixin (@color) when (lightness(@color) > 30%) {
+                                                                background-color: black;
+                                                            }
+                                                            .mixin (@color) when (lightness(@color) =<; 30%) {
+                                                                background-color: white;
+                                                            }
+                                                        </pre>
+
+                                                    <p>Stylus</p>
+                                                        <pre>
+                                                            if lightness(color) > 30%
+                                                                background-color black
+                                                            else
+                                                                background-color white
+                                                        </pre>
+
+                                        <h4><b>Loops</b></h4>
+
+                                            <p>Loops are useful when iterating through an array or
+                                            creating a series of styles as in grid widths. Like in 
+                                            the if/else case, LESS is using CSS Guards and recursive
+                                            mixins for looping.</p>
+
+                                                <h5>Examples</h5>
+
+                                                    <p>Sass</p>
+                                                        <pre>
+                                                            @for $i from 1px to 3px {
+                                                                .border-#{i} {
+                                                                    border: $i solid blue;
+                                                                }
+                                                            }
+                                                        </pre>
+
+                                                    <p>Less</p>
+                                                        <pre>
+                                                            .loop(@counter) when (@counter > 0){
+                                                                .loop((@counter - 1));
+
+                                                                .border-@{counter} {
+                                                                    border: 1px * @counter solid blue;
+                                                                }
+                                                            }
+                                                        </pre>
+
+                                                    <p>Stylus</p>
+                                                        <pre>
+                                                            for num in (1..3)
+                                                                .border-{num}
+                                                                    border 1px * num solid blue
+                                                        </pre>	
+
+                                        <h4><b>Math</b></h4>
+
+                                            <p>Math operations can be used for standard arithmetic
+                                            or unit conversions. SASS and Stylus support arithmetic
+                                            between different units. In addition to simple math,
+                                            pre-processors also have complex math support such as
+                                            ceiling, rounding, getting min or max value in a list etc.</p>
+
+                                                <h5>Examples</h5>
+
+                                                    <p>Sass</p>
+                                                        <pre>
+                                                            1cm * 1em => 1 cm * em
+                                                            2in * 3in => 6 in * in
+                                                            (1cm / 1em) * 4em => 4cm
+                                                            2in + 3cm + 2pc => 3.514in
+                                                            3in / 2in => 1.5
+                                                        </pre>
+
+                                                    <p>Less</p>
+                                                        <pre>
+                                                            1cm * 1em => 1cm * 1em
+                                                            2in * 3in => 6in
+                                                            (1cm / 1em) * 4em => 4cm
+                                                            2in + 3cm + 2pc => 3.514in
+                                                            3in / 2in => 1.5in
+                                                        </pre>
+
+                                                    <p>Stylus</p>
+                                                        <pre>
+                                                            1cm * 1em => 1 cm * em
+                                                            2in * 3in => 6in
+                                                            (1cm / 1em) * 4em => 4cm
+                                                            2in + 3cm + 2pc => 5.181in
+                                                            3in / 2in => 1.5in
+                                                        </pre>	
+
+
+                                        <h4><b>Imports</b></h4>
+
+                                            <p>Rather than using a one large file, separating your codes in
+                                            small pieces is helpful for expressing your declarations and
+                                            increasing maintainability and control over the codebase.
+                                            You can group the similar code chunks in similar folders
+                                            and import them to main css file. Also with import statement,
+                                            frameworks can also be added to work packages.</p>
+
+                                                <h5>Examples</h5>
+
+                                                    <p>Sass</p>
+                                                        <pre>
+                                                            @import "library";
+                                                            @import "mixins/mixin.scss";
+                                                            @import "reset.css";
+                                                        </pre>
+
+                                                    <p>Less</p>
+                                                        <pre>
+                                                            @import "library"
+                                                            @import "mixins/mixin.less"
+                                                            @import "reset.css"
+                                                        </pre>
+
+                                                    <p>Stylus</p>
+                                                        <pre>
+                                                            @import "library"
+                                                            @import "mixins/mixin.styl"
+                                                            @import "reset.css
+                                                        </pre>
+								</ul>
+						</li>
+						<li><input type="checkbox" id="cb8"/><label for="cb8">CSS Frameworks</label>
+                                    <ul>
+		                                  <li>Blueprint - aims to reduce development time.
+			                                 <ul><b>Features</b>
+				                                    <li>an easily customizable grid
+				                                    <li>sensible default typography
+                                                    <li>a typographic baseline
+                                                    <li>perfected browser CSS reset
+                                                    <li>a stylesheet for printing
+                                                    <li>powerful scripts for customization
+                                                    <li>bloat Minimized as much as possible
+			                                 </ul>
+		                                  <li>Bootsrap - free front-end framework
+			                                 <ul><b>Features</b>
+                                                    <li>supports Google Chrome, Firefox, Internet Explorer, Opera, and Safari (except on Windows)
+                                                    <li>layout, typography, forms, buttons, navigation, media queries + more, + .less files + js libraries
+                                                    <li>ability to create responsive designs
+			                                 </ul>
+		                                  <li>Cascade Framework - free, for creating websites and web applications.
+			                                 <ul><b>Features</b>
+                                                    <li>provides components, grid, icons, templates, topography
+                                                    <li>entirely based on an OOCSS architecture optimised for both performance and flexibility
+                                                    <li>design agnostic
+                                                    <li>allows you to choose between a Semantic Grid technique and a presentational grid technique
+                                            </ul>		
+		                                  <li>Foundation - a responsive front-end framework for any device, medium, and accessibility
+			                                 <ul><b>Features</b>
+                                                    <li>built w/ Sass/SCSS for best practices for rapid development
+                                                    <li>open source and available on Github
+                                                    <li>semantic, readable, flexible, and completely customizable
+                                                    <li>responsive Layout, source ordering, typography, forms, buttons, navigation, media queries, js libraries
+                                            </ul>	
+		                                  <li>YAML - provides layout bullet-proof modules for flexible layouts.
+			                                 <ul><b>Features</b>
+                                                    <li>bulletproof flexible grid system
+                                                    <li>flexible forms toolkit with theme-support
+                                                    <li>focussed on web standards & accessibility
+                                                    <li>optimized typography for all standard elements
+                                                    <li>matched building blocks for rapid prototyping
+                                                    <li>namespacing avoids conflicts with third-party CSS
+                                                    <li>well prepared for HTML5 and CSS3
+                                                    <li>very slim framework core (5.9 kB)
+                                                    <li>build on Sass
+			                                 </ul>	
+	                                </ul>	
+						</li>
+						<li><input type="checkbox" id="cb9"/><label for="cb9">CSS Statements</label>
+                            <ul>   <p>A statement is a building block that begins with any non-space characters and ends at the first closing brace or semi-colon
+									(outside a string, non-escaped and not included into another {}, () or [] pair).</p>
+								<p>Two kinds of statements:</p>
+								<ul>
+									<li>At-rules that start with an at sign, '@' (U+0040 COMMERCIAL AT), followed by an identifier and then continuing up the end
+									of the statement, that is up to the next semi-colon (;) outside of a block, or the end of the next block. Each type of 
+									at-rules, defined by the identifier, may have its own internal syntax, and semantics of course. They are used to convey 
+									meta-data information (like @charset or @import), conditional information (like @media or @document), or descriptive 
+									information (like @font-face).</li>
+									<li>Rulesets (or rules) that, as seen, associate a collection of CSS declarations to a condition described by a selector.</li>
+								</ul>
+							</ul>
+						</li>
+						<li><input type="checkbox" id="cb10"/><label for="cb10">CSS Selectors</label>
+                            <ul> 
+																<p>Selectors define to which elements a set of CSS rules apply.</p>
+									<h2><b>Basic Selectors</b></h2>
+									
+										<h4><b>Type selectors</b></h4>
+										
+											<p>This basic selector chooses all elements that matches the given name.</p>
+											
+											<p>Syntax: eltname</p>
+											
+											<p>Example: input will match any input element.</p>
+											
+										<h4><b>Class selectors</b></h4>
+										
+											<p>This basic selector chooses elements based on the value of their class attribute.</p>
+											
+											<p>Syntax: .classname</p>
+											
+											<p>Example: .index will match any element that has the class index (likely defined by a class="index" attribute or similar).</p>
+							
+										<h4><b>ID selectors</b></h4>
+										
+											<p>This basic selector chooses nodes based on the value of its id attribute. There should be only one element with a given ID in a document.</p>
+											
+											<p>Syntax: #idname</p>
+											
+											<p>Example: #toc will match the element that has the id toc (likely defined by a id="toc" attribute or similar).</p>
+											
+										<h4><b>Universal selectors</b></h4>
+										
+											<p>This basic selector chooses all nodes. It also exists in a one-namespace only and in an all-namespace variant too.</p>
+											
+											<p>Syntax: * ns|* *|*</p>
+											
+											<p>Example: * will match all the elements of the document.</p>
+											
+										<h4><b>Attribute selectors</b></h4>
+										
+											<p>This basic selector chooses nodes based on the value of one of its attributes.</p>
+											
+											<p>Syntax: [attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=value] [attr*=value]</p>
+											
+											<p>Example: [autoplay] will match all the elements that have the autoplay attribute set (to any value).</p>
+											
+									<h2><b>Combinators</b></h2>
+									
+										<h4><b>Adjacent sibling selectors</b></h4>
+										
+											<p>The '+' combinator selects nodes that immediately follow the former specified element.</p>
+											
+											<p>Syntax: A + B</p>
+											
+											<p>Example: div + p will match any p that immediately follows a div.</p>
+						
+										<h4><b>General sibling selectors</b></h4>
+										
+											<p>The '~' combinator selects nodes that follow (not necessarily immediately) the former specified element, if both elements shared the same parent.</p>
+											
+											<p>Syntax: A ~ B</p>
+											
+											<p>Example: p ~ span will match all span elements that follow a p element inside the same element.</p>
+											
+										<h4><b>Child selectors</b></h4>
+										
+											<p>The '>' combinator selects nodes that are direct children of the former specified element.</p>
+											
+											<p>Syntax: A > B</p>
+											
+											<p>Example: ul > li will match all li elements that are inside a ul element.</p>
+										
+										<h4><b>Descendant selectors</b></h4>
+										
+											<p>The ' ' combinator selects nodes that are children (not necessary direct children) of the former specified element.</p>
+											
+											<p>Syntax: A B</p>
+											
+											<p>Example: div span will match any span element that is inside a div element.</p>
+											
+									<h2><b>Pseudo-elements</b></h2>
+									
+										<p>Pseudo-elements are abstractions of the tree representing entities beyond what HTML does. For example, HTML doesn't have
+										an element describing the first letter or line of a paragraph, or the marker of a list. Pseudo-elements represent these
+										entities and allow CSS rules to be associated with them. that way, these entitities can be styled independently.</p>
+										
+									<h2><b>Pseudo-classes</b></h2>
+									
+										<p>Pseudo-classes allow to select elements based on information that is not contained in the document tree like a state
+										or that is particularly complex to extract. E.g. they match if a link has been previously visited or not.</p>
+							</ul>
+						</li>							
+						<li><input type="checkbox" id="cb11"/><label for="cb11">CSS Rule Precedence</label>
+									<ul><b>By origin and importance</b>
+										<li>User agent important declarations
+										<li>User important declarations
+										<li>Author important declarations
+										<li>Author normal declarations
+										<li>User normal declarations
+										<li>User agent normal declarations
+									</ul>
+									<ul><b>By specificity</b>
+										<li>Inline style
+										<li>Number of ID selectors
+										<li>Number of class selectors, attribute selectors and pseudo-classes
+										<li>Number of type selector and pseudo-elements
+									</ul>
+									<ul><b>By order</b>
+										<li>The last one will become first
+									</ul>
+						</li>
+						<li><input type="checkbox" id="cb12"/><label for="cb12">CSS Declaration Block</label>
+                            <ul>        <h4>Properties</h4>
+									<ul>
+										<li>Shorthand properties</li>
+										<li>Vendor - specific extensions</li>
+									</ul>
+							
+									<h4>Values</h4>
+							
+									<ul>
+										<li>Keyboards</li>
+										<li>Numbers</li>
+										<li>Dimensions</li>
+											<ul>
+												<li>length, angle, duration, frequency, and resolution.</li>
+												<li>length units</li>
+													<ul>
+													<li>font-relative: em, ex, ch, rem.</li>
+													<li>viewport-percentage: vw, ch, vmin, vmax.</li>
+													<li>absolute lengths: cm, mn, q, int, pc, px.</li>
+												</ul>
+												<li>angle units: dey, grad, rad, turn.</li>
+												<li>duration units: s, ms.</li>
+												<li>frequency units: hz, khz.</li>
+												<li>resolution units: dpi, dpcm, dppx.</li>
+											</ul>
+										<li>Percentages</li>
+										<li>URL and URI</li>
+										<li>Colors</li>
+										<li>String</li>
+										<li>Functions: calc(), attr(), counters(), linear-gradient(), radial-gradient(), translate(), scale(), rotate(), and etc.</li>
+									</ul>
+							</ul> 
+						</li>						
+					</ul>
+					
 				</h3>
 			</div>
-			<div id="http" class="tab-pane fade">
+			<div id="JSclient" class="tab-pane fade">
 				<h3>
-					<p class="para">Application layer communications <b> protocol </b> (Set of rules/standards that needs to be followed) used to access resources on the World Wide Web. </p>
-					<p class="para">Jointly developed by the W3C and the IETF.</p>
-					<p class="para">HTTP Versions: </p>
-					<p class="para">HTTP 0.9 </p>
-					<p class="para">HTTP 1.0 </p>
-					<p class="para">HTTP 1.1 </p>
-					<p class="para">HTTP 2 </p>
-				</h3>
-			</div>
+					<p class="para">Stands for <b>"Cascading Style Sheets". </b>It is a language that describes the style of an HTML document or used to specify the presentation aspects.</p>
+					<p class="para"><b>Developers:</b> Hakon Wium Lie = HTML Cascading Style Sheets and Bert Boss = Stream-based Style Sheet Proposal</p>
+					<p class="para">CSS is a separate language with its own syntax, which is enable you to lay out web pages exactly as you want them.</p>
+					<ul>
 		</div>	
 
 	</div><!-- end main -->
