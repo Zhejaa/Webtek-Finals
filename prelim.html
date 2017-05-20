@@ -25,6 +25,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!----font-Awesome----->
    	<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+	<script type="text/javascript" src="js/modernizr.custom.29473.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/css/demo.css" />
+        <link rel="stylesheet" type="text/css" href="css/css/style.css" />
 <!----font-Awesome----->
 <style>
 	.nav > li {
@@ -89,6 +92,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<li><a data-toggle="tab" href="#internet">Internet</a></li>
 			<li><a data-toggle="tab" href="#www">World Wide Web</a></li>
 			<li><a data-toggle="tab" href="#http">HTTP</a></li>
+			<li><a data-toggle="tab" href="#references">References</a></li>
 		</ul>
 		<div class="tab-content">
 			<div id="internet" class="tab-pane fade in active">
@@ -118,6 +122,91 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<p class="para">HTTP 1.0 </p>
 					<p class="para">HTTP 1.1 </p>
 					<p class="para">HTTP 2 </p>
+				</h3>
+				
+				<section class="ac-container">
+				<div>
+					<input id="ac-1" name="accordion-1" type="checkbox" />
+					<label for="ac-1">HTTP Fundamentals</label>
+					<article class="ac-small">
+						<ul>
+										<li> HTTP typically runs on top of TCP/IP, using TCP port 80 by default (TCP port 443 for HTTPS). </li>
+										<li> HTTP resources are identified using URIs (specifically HTTP URLs). </li>
+										<li> HTTP is based on client-server architecture. </li>
+											<ul>
+											<li> Clients (AKA User Agents (UA)). </li>
+												<ul>
+													<li> Web browsers </li>
+													<li> Web crawlers </li>
+													<li> Email clients </li>
+													<li> Other end user tools and applications </li>
+												</ul>
+												<li> Servers </li>
+													<ul>
+														<li> Origin servers </li>
+														<li> Proxy servers </li>
+														<li> Gateways </li>
+														<li> Tunnels </li>
+													</ul>
+												</ul>
+										<li> HTTP uses a request-response standard protocol. </li>
+											<ul>
+												<li> Client sends an HTTP request to the server. </li>
+												<li> Server processes the request and replies with an HTTP response message. </li>
+											</ul>
+										<li> HTTP is a stateless communications protocol. </li> 
+											<ul>
+												<li> Servers DO NOT keep information about clients between requests. </li>
+												<li> Web applications affect session tracking using mechanisms such as cookies (a very small text file) on URL-encoded session
+													information to keep track of related client requests. </li>
+											</ul>
+										<li> HTTP provides support for other functionalities such as cache-control (cache: Local storage/copy of a resource that is fetched from a server), 
+											content media type (MIME) specification, language and character set specification, content/transfer coding, client-server protocol negotiations,
+											persistent connections, request pipelining etc. </li> 
+									</ul>
+					</article>
+				</div>
+				<div>
+					<input id="ac-2" name="accordion-1" type="checkbox" />
+					<label for="ac-2">How we work</label>
+					<article class="ac-medium">
+						<p>Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price. </p>
+					</article>
+				</div>
+				<div>
+					<input id="ac-3" name="accordion-1" type="checkbox" />
+					<label for="ac-3">References</label>
+					<article class="ac-large">
+						<p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man. </p>
+					</article>
+				</div>
+				<div>
+					<input id="ac-4" name="accordion-1" type="checkbox" />
+					<label for="ac-4">Contact us</label>
+					<article class="ac-large">
+						<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
+					</article>
+				</div>
+			</section>
+			
+			</div>
+			
+			<div id="references" class="tab-pane fade">
+				<h3>
+					<p class="para">Lecture of Sir Carlos O. Montes</p>
+					<p class="para">https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html</p>
+					<p class="para">https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol</p>
+					<p class="para">https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html</p>
+					<p class="para">https://www.w3.org/Protocols/rfc2616/rfc2616-sec6.html</p>
+					<p class="para">https://www.w3.org/Protocols/rfc2616/rfc2616.html</p>
+					<p class="para">https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.1</p>
+					<p class="para">https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html</p>
+					<p class="para">https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html</p>
+					<p class="para">https://www.w3.org/Protocols/HTTP/HTRQ_Headers.html#accept-encoding</p>
+					<p class="para">https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html</p>
+					<p class="para">http://www.businessdictionary.com/definition/World-Wide-Web-WWW.htm</p>
+					<p class="para">http://timeline.web.cern.ch/timelines/The-birth-of-the-World-Wide-Web/overlay#1989-03-12 00:00:</p>
+					<p class="para">http://www.webopedia.com/TERM/H/HTTP.html</p>
 				</h3>
 			</div>
 		</div>
