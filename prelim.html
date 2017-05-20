@@ -25,9 +25,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!----font-Awesome----->
    	<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
-	<script type="text/javascript" src="js/modernizr.custom.29473.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/css/demo.css" />
-        <link rel="stylesheet" type="text/css" href="css/css/style.css" />
 <!----font-Awesome----->
 <style>
 	.nav > li {
@@ -40,7 +37,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="container">
 	<div class="row header">
 		<div class="logo navbar-left">
-			<h1><a href="index.html">Learner </a></h1>
+			<h1><a href="index.html">Learner</a></h1>
 		</div>
 		<div class="h_search navbar-right">
 			<form>
@@ -117,18 +114,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<h3>
 					<p class="para">Application layer communications <b> protocol </b> (Set of rules/standards that needs to be followed) used to access resources on the World Wide Web. </p>
 					<p class="para">Jointly developed by the W3C and the IETF.</p>
-					<p class="para">HTTP Versions: </p>
-					<p class="para">HTTP 0.9 </p>
-					<p class="para">HTTP 1.0 </p>
-					<p class="para">HTTP 1.1 </p>
-					<p class="para">HTTP 2 </p>
 				</h3>
+				<h3>
+				<li>
+					<input type="checkbox" id="cb24"/><label for="cb24">HTTP Versions</label>
+					<ul>
+						<li>HTTP 0.9</li>
+						<li>HTTP 1.0</li>
+						<li>HTTP 1.1</li>
+						<li>HTTP 2</li>
+					</ul>
+				</h3>
+				</li>
+				<h3>
+				<li>
+				<input type="checkbox" id="cb20"/><label for="cb20">HTTP Fundamentals</label>
 				
-				<section class="ac-container">
-				<div>
-					<input id="ac-1" name="accordion-1" type="checkbox" />
-					<label for="ac-1">HTTP Fundamentals</label>
-					<article class="ac-small">
 						<ul>
 										<li> HTTP typically runs on top of TCP/IP, using TCP port 80 by default (TCP port 443 for HTTPS). </li>
 										<li> HTTP resources are identified using URIs (specifically HTTP URLs). </li>
@@ -164,31 +165,188 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											content media type (MIME) specification, language and character set specification, content/transfer coding, client-server protocol negotiations,
 											persistent connections, request pipelining etc. </li> 
 									</ul>
-					</article>
-				</div>
-				<div>
-					<input id="ac-2" name="accordion-1" type="checkbox" />
-					<label for="ac-2">How we work</label>
-					<article class="ac-medium">
-						<p>Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price. </p>
-					</article>
-				</div>
-				<div>
-					<input id="ac-3" name="accordion-1" type="checkbox" />
-					<label for="ac-3">References</label>
-					<article class="ac-large">
-						<p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man. </p>
-					</article>
-				</div>
-				<div>
-					<input id="ac-4" name="accordion-1" type="checkbox" />
-					<label for="ac-4">Contact us</label>
-					<article class="ac-large">
-						<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
-					</article>
-				</div>
-			</section>
-			
+						</ul>
+				</li>
+				<li>
+				<input type="checkbox" id="cb21"/><label for="cb21">HTTP Request Message</label>
+						<ul>
+									<li> Request line (crlf terminated line consisting of the 3-space) </li>
+									<li> Message headers </li>
+									<li> Empty line (crlf) </li>
+									<li> Message body (optional) </li>
+						</ul>
+				<li>		
+				<input type="checkbox" id="cb22"/><label for="cb22">HTTP Response Message</label>
+						
+						<ul>
+									<li> Status line </li>
+										<ul>
+											<li> HTTP Protocol version </li>
+											<li> Status code </li>
+											<li> Reason phrase </li>
+										</ul>
+									<li> Message headers </li>
+									<li> Status code </li>
+									<li> Empty line </li>
+									<li> Message body (optional) </li>
+						</ul>
+					</li>
+					<li>					
+				<input type="checkbox" id="cb23"/><label for="cb23">HTTP Request Methods</label>
+						<ul> 
+									<li> Standard Methods </li>
+										<ul>
+											<li>GET – retrieved resource is returned in the body of response as entity </li>
+											<li>HEAD – same as GET, except the message body is not included in the response </li>
+											<li>POST – submit data to server, usually a script </li>
+											<li>PUT – send data a specified URL to a server </li>
+											<li>DELETE – specify resource and delete from server </li>
+											<li>OPTIONS - request for information about the communication options </li>
+											<li>TRACE – requests loop-back of the request message </li>
+											<li>CONNECT – request the establishment of a tunnel </li>
+										</ul>
+									<li> Idempotent Methods </li> 
+										<ul>
+											<li> GET, HEAD, PUT, DELETE </li> 
+										</ul>
+									<li> Extension Methods </li> 
+										<ul>
+											<li> PROPFIND </li> 
+											<li> PROPPATCH </li> 
+											<li> MKCOL </li> 
+											<li> COPY </li>
+											<li> MOVE </li> 
+											<li> LOCK </li> 
+											<li> UNLOCK </li>
+										</ul>
+								</ul>
+					</li>			
+					<li>
+					<input type="checkbox" id="cb24"/><label for="cb24">HTTP Message Headers</label>
+							<ul>
+									<li>GENERAL HEADER FIELDS </li>
+										<ul>
+											<li>Cache-Control</li>
+											<li>Connection</li>
+											<li>Date</li>
+											<li>Pragma</li>
+											<li>Trailer</li>
+											<li>Transfer-Encoding</li>
+											<li>Upgrade</li>
+											<li>Via</li>
+											<li>Warning</li>
+										</ul>
+									<li>REQUEST HEADER FIELDS </li> 
+										<ul>
+											<li> Accept </li>
+											<li> Accept-charset </li>
+											<li> Accept-encoding </li>
+											<li> Accept-Language </li>
+											<li> Authorization </li>
+											<li> Expect </li>
+											<li> From </li>
+											<li> Host </li>
+											<li> If-Match </li>
+											<li> If-Modified-Since </li>
+											<li> If-None-Match </li>
+											<li> If-Range </li>
+											<li> If-Unmodified-Since </li>
+											<li> Max-forward </li>
+											<li> Proxy-Authorization </li>
+											<li> Range </li>
+											<li> Referer </li>
+											<li> User-Agent </li>
+										</ul>
+									<li>RESPONSE HEADER FIELDS </li> 
+										<ul>
+											<li>Accept–Ranges</li>	 
+											<li>Age</li>		      	
+											<li>ETag</li>
+											<li>Location</li>		 
+											<li>Proxy–Authenticate</li>	
+											<li>Retry–After</li>
+											<li>Server</li>
+											<li>Vary</li>			
+											<li>www–authenticate</li>
+										</ul>	
+									<li>ENTITY HEADER FIELDS </li> 
+										<ul>										
+											<li>Allow
+											<li>Content – Encoding	 -how is the content encoded </li>
+											<li>Content – Language	 -concept of accessibility </li>
+											<li>Content – Length 	 -how many bytes does the content have </li>
+											<li>Content – Location	 -to locate the content </li>
+											<li>Content – MD5		 -hashing algorithm </li>
+											<li>Content – Range		 -for partial retrieval </li>
+											<li>Content – Type		 -to indicate the file type </li>
+ 											<li>Expires			 	 -specifies to the client that cache can be restore </li>
+											<li>Last – modified		 -Last time of modification </li>
+										</ul>
+								</ul>
+							</li>
+							<li>	
+					<input type="checkbox" id="cb25"/><label for="cb25">HTTP Status Codes</label>
+								<ul>
+									<li>Informational (1xx) </li>
+										<ul>
+											<li>100 Continue			-used when asking if you can continue </li>
+											<li>101 Switching Protocols		-used when the client requested for an update </li>
+										</ul>	
+									<li>Success (2xx)</li>
+										<ul>
+											<li>200 Ok </li>
+											<li>201 Created </li>
+											<li>202 Accepted </li>
+											<li>203 Non-Authorative Information </li>
+											<li>204 No Content			-if the delete is successful </li>
+											<li>205 Reset Content		-used to tell the client to reset the data entry form </li>
+											<li>206 Partial Content	</li>	
+										</ul>
+									<li>Redirection (3xx)</li>
+										<ul>
+											<li>300 Multiple Choices </li>
+											<li>301 Moved Permanently	-to tell the client that resource has been moved </li>
+											<li>302 Found			-redirects from a server </li>
+											<li>303 See other	</li>
+											<li>304 Not Modified </li>
+											<li>305 Use proxy			-you cannot access from the server </li>
+											<li>307 Temporary Redirect </li>
+										</ul>
+									<li>Client Error (4xx)</li>
+										<ul>
+											<li>400 Bad request </li>
+											<li>401 Unauthorized </li>
+											<li>402 Payment Required		-providing payment by accessing resources </li>
+											<li>403 Forbidden			-You’re not allowed to access </li>
+											<li>404 Forbidden </li>
+											<li>405 Method not allowed </li>
+											<li>406 Not Acceptable		-request not available </li>
+											<li>407 Proxy Authentication Required </li>
+											<li>408 Request Timeout </li>
+											<li>409 Conflict </li>
+											<li>410 Gone	</li>		 
+											<li>411 Length Required </li>
+											<li>412 Precondition Failed </li>
+											<li>413 Request Entity Too Large </li>
+											<li>414 Request-URI Too Long </li>
+											<li>415 Unsupported Media Type </li>
+											<li>416 Request Range Not Satisfiable </li>
+											<li>417 Expectation Failed </li>
+											<li>426 Upgrade Required		-to upgrade protocol </li>
+										</ul>
+									<li>Server Error (5xx) </li>
+										<ul>
+											<li>500 Internal Server Error </li>
+											<li>501 Not Implemented</li>
+											<li>502 Not Implemented </li>
+											<li>503 Service Unavailable </li>
+											<li>504 Gateway Timeout </li>
+											<li>505 HTTP Version Not Supported </li>
+										<ul>
+								</ul>
+					
+				</li>
+				</h3>
 			</div>
 			
 			<div id="references" class="tab-pane fade">
