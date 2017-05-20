@@ -1903,6 +1903,21 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap\'s JavaScript re
   }
 
 
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function() {
+    this.classList.toggle("active");
+    var panelista = this.nextElementSibling;
+    if (panelista.style.maxHeight){
+      panelista.style.maxHeight = null;
+    } else {
+      panelista.style.maxHeight = panelista.scrollHeight + "px";
+    } 
+  }
+}
+
   // AFFIX PLUGIN DEFINITION
   // =======================
 
