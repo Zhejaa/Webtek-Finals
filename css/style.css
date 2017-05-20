@@ -215,10 +215,34 @@ body {
 	line-height: 1.8em;
 	color: #868686;
 }
+
 .images_1_of_4 a{
 	position: relative;
 	z-index: 1;
 }
+/* Collapse */
+
+input[type=checkbox] { display: none; }
+input[type=checkbox] ~ ul { 
+	max-height: 0;
+	max-width: 0;
+	opacity: 0;
+	overflow: hidden;
+   -webkit-transition:all 1s ease;  
+   -moz-transition:all 1s ease;  
+   -o-transition:all 1s ease;  
+   transition:all 1s ease;
+	font-family: 'open_sansregular';
+	background:#ffffff;
+	font-size: 60%;
+}
+input[type=checkbox]:checked ~ ul { 
+	max-height: 100%;
+	max-width: 100%;
+	opacity: 1;
+}
+
+
 /* Button 1 */
 .fa-btn {
 	font-size: 14px;

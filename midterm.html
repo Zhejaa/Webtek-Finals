@@ -88,13 +88,249 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="tab-content">
 			<div id="internet" class="tab-pane fade in active">
 				<h3>
-					<p class="para">A global system of interconnected computer networks that use the standard Internet Protocol
-						Suite (TCP/IP) to serve billions of users world wide.</p>
-					<p class="para">It is a network of networks that consists of millions of private, public, academic, business,
-						and government networks, of local to global scope, that are linked by a broad array of electronic,
-						wireless and optical networking technologies.</p>
-					<p class="para"><b> Vinton Gray Cerf </b> is known to be the Father of the Internet</p>
+					<p class="para">Stands for "Hypertext Markup Language." HTML is the language used to create webpages. "Hypertext" refers to the hyperlinks that an HTML page may contain. "Markup language" refers to the way tags are used to define the page layout and elements within the page. It was invented by Tim Berners-Lee, a British Engineer, Computer Scientist and Professor at MIT in 1991. </p>
+					<ul>
+						<li><input type="checkbox" id="cb1"/><label for="cb1">HTML Fundamentals</label>
+							<ul>
+                                             <ul>
+                                                <li>An HTML 4 document is composed of three parts:</li>
+
+                                                    <ol>
+                                                        <li>A line containing HTML version information</li>
+                                                        <li>A declarative header section (delimited by the HEAD element)</li>
+                                                        <li>A body, which contains the document's actual content. The body may be implemented by the BODY element or the FRAMESET element.</li>
+                                                    </ol>
+                                                <li>White space (spaces, newlines, tabs, and comments) may appear before or after each section. Sections 2 and 3 should be delimited by the HTML element.</li>
+                                                <li>Here's an example of a simple HTML document:</li>
+                                                    <pre>
+                                                        &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+                                                           "http://www.w3.org/TR/html4/strict.dtd"&gt;
+                                                        &lt;HTML&gt;
+                                                           &lt;HEAD&gt;
+                                                              &lt;TITLE&gt;My first HTML document&lt;/TITLE&gt;
+                                                           &lt;/HEAD&gt;
+                                                           &lt;BODY&gt;
+                                                              &lt;P&gt;Hello world!
+                                                           &lt;/BODY&gt;
+                                                        &lt;/HTML&gt;
+                                                    </pre>
+                                            </ul>
+                                        </li>
+
+                                        <li> What is the syntax of HTML? </li>
+                                        <ul>
+                                            <img src="images/Elements.png" alt="Syntax HTML" height="200" width="400">
+                                            <li>For opening a simple element with a start tag
+                                                <ol>
+                                                    <li>it starts with "<".</li>
+                                                    <li>then a list of characters without space, the tagname (or element)</li>
+                                                    <li>ends usually with a ">".</li>
+                                                </ol>
+                                            </li>
+                                            <li>Then closing the simple element with a end tag
+                                                <ol>
+                                                    <li>it starts with "</". </li>
+                                                    <li>then the same list of characters without space, the tagname (or element)</li>
+                                                    <li>ends usually with a ">".</li>
+                                                </ol>
+                                            </li>
+                                        </ul>
+                            </ul>							
+						<li><input type="checkbox" id="cb2"/><label for="cb2">HTML Versions</label>
+							<ul>
+                                    <ul>
+                                        <li> HTML 1.0 (1989 - 1994) </li>
+                                            <ul>
+                                                <li>The first version of HTML that supported inline images and text controls.</li>
+                                                <li>HTML 1.0 was very limited in terms of styling and presentation of content.</li>
+                                            </ul>
+                                        <li> HTML 2.0 (1995) </li>
+                                            <ul>
+                                                <li>This specification supported more browsers. HTML 2.0 was considerably improved to support.</li>
+                                            </ul>
+                                        <li> HTML 3.20 (1997) </li>
+                                            <ul>
+                                                <li>This version included support for creating tables and expanded options for form elements.</li>
+                                                <li>This version also allowed web pages to include complex mathematical equations.</li>
+                                            </ul>
+                                        <li> HTML 4.01 (1999) </li>
+                                            <ul>
+                                                <li>HTML 4.01 focused on separating presentation styling information from the actual content by the use of style sheets as HTML 3.20 resulted in difficult maintenance because presentation styling information was included directly in the webpage. </li>
+                                                <li>In HTML 4.0 with the use of style sheets, it is now possible to change the appearance/look of the website by changing just the style sheet (s) itself. In comparison, in the earlier versions of HTML making the same changes for the entire website meant changing the styling information in the individual pages.</li>
+                                            </ul>
+                                        <li> HTML 5 </li>
+                                            <ul>
+                                                <li>HTML5 is an effort to bring order to web development chaos by organizing common practices,
+                                                    embracing implementations from various browsers. </li>
+                                                <li>It is massive, with over 100 specifications as part of the HTML5 specs.
+                                                    Understanding this, you can simplify by thinking of HTML5 this way. </li>
+                                                <li>HTML5 is simply just an umbrella term for the next generation of web apps an how functionality will be expanded with better markup (HTML),
+                                                    better style (CSS), and better interactivity (JavaScript).</li>
+                                                <li>HTML 5 was adopted by the new  working group of the World Wide Web Consortium (W3C) in 2007. This group published the first public draft of HTML 5 in January 2008. As of now, HTML5 is in the "Call for Review" state, and the W3C expects that it will reach its final state by the end of 2014.</li>
+                                            </ul>
+                                        <li> HTML 5.1 (1 Nov 2016) </li>
+                                            <ul>
+                                                <li> HTML 5.1 is a W3C Proposed Recommendation since 15 September 2016.</li>
+                                                <li>Many web designers wonder these days about the differences between HTML5 and HTML 5.1. HTML 5.1 introduced new elements, attributes, and features, extending HTML 5.0 with the following:
+                                                    <ul>
+                                                        <li>CanvasProxy, transferControlToProxy()</li>
+                                                        <li>probablySupportsContext()</li>
+                                                        <li>setContext()</li>
+                                                        <li>forceSpellCheck()</li>
+                                                        <li>inert attribute</li>
+                                                        <li>table sorting</li>
+                                                        <li>menu, menuitem, contextmenu</li>
+                                                        <li>allowFullScreen</li>
+                                                        <li>fastSeek()</li>
+                                                        <li>toDataURLHD(), toBlobHD()</li>
+                                                        <li>Autocomplete limited to on|off, inputmode</li>
+                                                        <li>ImageBitmap</li>
+                                                        <li>details and summary element</li>
+                                                        <li>dialog element</li>
+                                                        <li>:dir() pseudoclass</li>
+                                                        <li>seamless iframes</li>
+                                                        <li>isContentHandlerRegistered() and isProtocolHandlerRegistered() methods</li>
+                                                        <li>datetime, datetime-local, week, month input types</li>
+                                                        <li>reportValidity() method</li>
+                                                        <li>scoped style</li>
+                                                        <li>XMLDocument interface</li>
+                                                        <li>picture element and srcset attribute</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        <li> HTML 5.2
+                                            <ul>
+                                                <li>Having moved HTML 5.1 close to the final stage, the working group has now started focusing its attention on the future. As a result, the group has officially started working on HTML 5.2 which is now a Working Draft. Therefore, the HTML 5.2 specifications are a document that W3C has published for review by the community, including W3C Members, the public, and other organizations.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>							
+							</ul>
+						</li>
+						<li><input type="checkbox" id="cb3"/><label for="cb3">HTML Elements</label>
+							<ul>
+                                    <ul>
+                                        <li>Tags tend not to do much more than mark the beginning and end of an element. Elements are the bits that make up web pages.
+                                            You would say, for example, that everything that is in between (and includes) the &lt;body&gt; and &lt;/body&gt; tags is the body element.
+                                            As another example, whereas “&lt;title&gt;” and “&lt;/title&gt;” are tags, “&lt;title&gt;Rumple Stiltskin&lt;title&gt;” is a title element.</li>
+                                        <li> Document Elements
+                                            <div class="content">
+                                                <div class="container-fluid">
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                            <div class="card">
+                                                                <div class="content table-responsive table-full-width">
+                                                                    <table class="table table-hover table-striped">
+                                                                        <thead>
+                                                                        <th>Element</th>
+                                                                        <th>Description</th>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                        <tr>
+                                                                            <td>&lt;html&gt;</td>
+                                                                            <td>The HTML &lt;html&gt; element represents the root (top-level element) of an HTML document, so it is also referred to as the root element. All other elements must be descendants of this element.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;head&gt;</td>
+                                                                            <td>The HTML &lt;head&gt; element provides general information (metadata) about the document, including its title and links to its scripts and style sheets.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;title&gt;</td>
+                                                                            <td>The HTML &lt;title&gt; element defines the title of the document, shown in a browser's title bar or on the page's tab. It can only contain text, and any contained tags are ignored.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;body&gt;</td>
+                                                                            <td>The HTML &lt;body&gt; Element represents the content of an HTML document. There can be only one <body> element in a document.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;meta&gt;</td>
+                                                                            <td>The HTML &lt;meta&gt; element represents metadata that cannot be represented by other HTML meta-related elements, like &lt;base&gt;, &lt;link&gt;, &lt;shift&gt;, &lt;style&gt; or &lt;title&gt;.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;style&gt;</td>
+                                                                            <td>The HTML &lt;style&gt; element contains style information for a document, or part of a document. By default, the style instructions written inside that element are expected to be CSS.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;h1-h6&gt;</td>
+                                                                            <td>Text of the Element is a section heading. Headings are numbered and displayed in order of decreasing importance. Headings are separate paragraphs.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;p&gt;</td>
+                                                                            <td>The HTML &lt;p&gt; element represents a paragraph of text.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;br&gt;</td>
+                                                                            <td>The HTML &lt;br&gt; element produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;hr&gt;</td>
+                                                                            <td>The HTML &lt;hr&gt; element represents a thematic break between paragraph-level elements (for example, a change of scene in a story, or a shift of topic with a section). In previous versions of HTML, it represented a horizontal rule. It may still be displayed as a horizontal rule in visual browsers, but is now defined in semantic terms, rather than presentational terms.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;div&gt;</td>
+                                                                            <td>The HTML &lt;div&gt; element is the generic container for flow content and does not inherently represent anything. Use it to group elements for purposes such as styling (using the class or id attributes), marking a section of a document in a different language (using the lang attribute), and so on.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;pre&gt;</td>
+                                                                            <td>The HTML &lt;pre&gt; element represents preformatted text. Text within this element is typically displayed in a non-proportional ("monospace") font exactly as it is laid out in the file. Whitespace inside this element is displayed as typed.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;strong&gt;</td>
+                                                                            <td>The HTML &lt;strong&gt; element gives text strong importance, and is typically displayed in bold.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;em&gt;</td>
+                                                                            <td>The HTML &lt;em&gt; element marks text that has stress emphasis. The &lt;em&gt; element can be nested, with each level of nesting indicating a greater degree of emphasis.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;a&gt;</td>
+                                                                            <td>The HTML &lt;a&gt; element (or anchor element) creates a hyperlink to other web pages, files, locations within the same page, email addresses, or any other URL.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;img&gt;</td>
+                                                                            <td>The HTML &lt;img&gt; element represents an image in the document.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;ul&gt;</td>
+                                                                            <td>The HTML &lt;ul&gt; element represents an unordered list of items, typically rendered as a bulleted list.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;ol&gt;</td>
+                                                                            <td>The HTML &lt;ol&gt; element represents an ordered list of items, typically rendered as a numbered list.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;li&gt;</td>
+                                                                            <td>The HTML &lt;li&gt; element is used to represent an item in a list. It must be contained in a parent element: an ordered list (&lt;ol&gt;), an unordered list (&lt;ul&gt;), or a menu (&lt;menu&gt;). In menus and unordered lists, list items are usually displayed using bullet points. In ordered lists, they are usually displayed with an ascending counter on the left, such as a number or letter.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;dl&gt;</td>
+                                                                            <td>The HTML &lt;dl&gt; element represents a description list. The element encloses a list of groups of terms and descriptions. Common uses for this element are to implement a glossary or to display metadata (a list of key-value pairs).</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;dt&gt;</td>
+                                                                            <td>The HTML &lt;dt&gt; element identifies a term in a description list. This element can occur only as a child element of a &lt;dl&gt;. It is usually followed by a &lt;dd&gt; element; however, multiple &lt;dt&gt; elements in a row indicate several terms that are all defined by the immediate next &lt;dd&gt; element.</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>&lt;dd&gt;</td>
+                                                                            <td>The HTML &lt;dd&gt; element indicates the description of a term in a description list (&lt;dl&gt;).</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td></td>
+                                                                            <td> above are basic html elements, click here to <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element"> read more </a>.</td>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>						
+							</ul>
+						</li>						
+					</ul>	
 				</h3>
+
 			</div>
 			<div id="www" class="tab-pane fade">
 				<h3>
